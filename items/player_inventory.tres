@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Inventory" load_steps=8 format=3 uid="uid://dhltajbjgl344"]
+
+[ext_resource type="Script" uid="uid://djurp6pk6084b" path="res://scripts/item.gd" id="1_6xhtq"]
+[ext_resource type="Resource" uid="uid://bhte3oj5jfgi" path="res://items/necklace-ruby.tres" id="2_3qven"]
+[ext_resource type="Script" uid="uid://cpufbhkxmwmow" path="res://scripts/inventory.gd" id="2_br4r5"]
+[ext_resource type="Resource" uid="uid://jbs35e28da2a" path="res://items/bone.tres" id="3_rk57f"]
+[ext_resource type="Resource" uid="uid://bdwu12aebl7pt" path="res://items/necklace-sapphire.tres" id="4_ccamj"]
+[ext_resource type="Resource" uid="uid://ci5jupm28w7pb" path="res://items/necklace-diamond.tres" id="5_k6uc5"]
+[ext_resource type="Resource" uid="uid://bmssp65n8mxdg" path="res://items/ring-engraved.tres" id="6_u4asp"]
+
+[resource]
+script = ExtResource("2_br4r5")
+items = Array[ExtResource("1_6xhtq")]([ExtResource("2_3qven"), null, ExtResource("3_rk57f"), null, ExtResource("4_ccamj"), ExtResource("5_k6uc5"), null, ExtResource("6_u4asp"), null, null])
+metadata/_custom_type_script = "uid://cpufbhkxmwmow"

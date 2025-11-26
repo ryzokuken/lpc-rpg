@@ -1,0 +1,17 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://cack5ycxfffjm"
+
+[deps]
+
+files=["res://sprites/characters/female-merchant/credits/credits.notes.translation", "res://sprites/characters/female-merchant/credits/credits.authors.translation", "res://sprites/characters/female-merchant/credits/credits.licenses.translation", "res://sprites/characters/female-merchant/credits/credits.urls.translation"]
+
+source_file="res://sprites/characters/female-merchant/credits/credits.csv"
+dest_files=["res://sprites/characters/female-merchant/credits/credits.notes.translation", "res://sprites/characters/female-merchant/credits/credits.authors.translation", "res://sprites/characters/female-merchant/credits/credits.licenses.translation", "res://sprites/characters/female-merchant/credits/credits.urls.translation"]
+
+[params]
+
+compress=true
+delimiter=0

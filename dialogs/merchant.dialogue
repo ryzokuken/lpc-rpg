@@ -1,0 +1,10 @@
+~ start
+Merchant: Good day! How can I help you?
+- Look at wares
+	Player: Show me your wares.
+	Merchant: Absolutely.
+	do open_inventory()
+- Free sample
+	Player: Do you have any free samples?
+	Merchant: Sure. Try this out.
+=> END

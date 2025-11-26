@@ -1,0 +1,17 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://um0gckky0upb"
+
+[deps]
+
+files=["res://sprites/characters/blacksmith/credits/credits.notes.translation", "res://sprites/characters/blacksmith/credits/credits.authors.translation", "res://sprites/characters/blacksmith/credits/credits.licenses.translation", "res://sprites/characters/blacksmith/credits/credits.urls.translation"]
+
+source_file="res://sprites/characters/blacksmith/credits/credits.csv"
+dest_files=["res://sprites/characters/blacksmith/credits/credits.notes.translation", "res://sprites/characters/blacksmith/credits/credits.authors.translation", "res://sprites/characters/blacksmith/credits/credits.licenses.translation", "res://sprites/characters/blacksmith/credits/credits.urls.translation"]
+
+[params]
+
+compress=true
+delimiter=0

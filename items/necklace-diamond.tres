@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://ci5jupm28w7pb"]
+
+[ext_resource type="Script" uid="uid://djurp6pk6084b" path="res://scripts/item.gd" id="1_icgkb"]
+[ext_resource type="Texture2D" uid="uid://nnr74aq7nxee" path="res://sprites/interface/496_RPG_icons/Ac_Necklace03.png" id="2_7vt7f"]
+
+[resource]
+script = ExtResource("1_icgkb")
+name = "Diamond Necklace"
+icon = ExtResource("2_7vt7f")
+description = "A glorious silver necklace laid with a large, beautifully cut diamond. Your opulence truly knows no bounds."
+weight = 1
+value = 2000
+metadata/_custom_type_script = "uid://djurp6pk6084b"

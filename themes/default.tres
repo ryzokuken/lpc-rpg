@@ -1,0 +1,56 @@
+[gd_resource type="Theme" load_steps=10 format=3 uid="uid://drtks6vtivflm"]
+
+[ext_resource type="Texture2D" uid="uid://ddnswm7caplvx" path="res://sprites/interface/kenney_ui-pack-rpg-expansion/PNG/panelInset_brown.png" id="1_1fv3y"]
+[ext_resource type="Texture2D" uid="uid://ccwee7ui4wcmv" path="res://sprites/interface/kenney_ui-pack-rpg-expansion/PNG/buttonLong_grey.png" id="1_d3e7e"]
+[ext_resource type="StyleBox" uid="uid://c8jj2svb0ox2r" path="res://themes/panel_stylebox.tres" id="1_gnsgt"]
+[ext_resource type="StyleBox" uid="uid://dep5hts02vwk0" path="res://themes/brown_button.tres" id="2_cgbfu"]
+[ext_resource type="Texture2D" uid="uid://d1s4lg10nrtsa" path="res://sprites/interface/kenney_ui-pack-rpg-expansion/PNG/buttonLong_brown_pressed.png" id="2_d3e7e"]
+[ext_resource type="FontFile" uid="uid://c0b8tb0unrnca" path="res://fonts/Kenney Pixel.ttf" id="2_gnsgt"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ck2yl"]
+texture = ExtResource("1_d3e7e")
+texture_margin_left = 8.0
+texture_margin_top = 8.0
+texture_margin_right = 8.0
+texture_margin_bottom = 12.0
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_k1vgm"]
+texture = ExtResource("2_d3e7e")
+texture_margin_left = 8.0
+texture_margin_top = 8.0
+texture_margin_right = 8.0
+texture_margin_bottom = 8.0
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_l6fbw"]
+texture = ExtResource("1_1fv3y")
+texture_margin_left = 6.0
+texture_margin_top = 6.0
+texture_margin_right = 6.0
+texture_margin_bottom = 6.0
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[resource]
+default_font = ExtResource("2_gnsgt")
+default_font_size = 48
+Button/colors/font_disabled_color = Color(0, 0, 0, 0.5019608)
+Button/styles/disabled = SubResource("StyleBoxTexture_ck2yl")
+Button/styles/focus = ExtResource("2_cgbfu")
+Button/styles/hover = ExtResource("2_cgbfu")
+Button/styles/normal = ExtResource("2_cgbfu")
+Button/styles/pressed = SubResource("StyleBoxTexture_k1vgm")
+ItemList/colors/font_color = Color(1, 1, 1, 1)
+ItemList/styles/panel = SubResource("StyleBoxTexture_l6fbw")
+Label/colors/font_color = Color(0, 0, 0, 1)
+MarginContainer/constants/margin_bottom = 10
+MarginContainer/constants/margin_left = 10
+MarginContainer/constants/margin_right = 10
+MarginContainer/constants/margin_top = 10
+Panel/styles/panel = ExtResource("1_gnsgt")
+PanelContainer/styles/panel = ExtResource("1_gnsgt")
+RichTextLabel/colors/default_color = Color(0, 0, 0, 1)
+TooltipPanel/styles/panel = ExtResource("1_gnsgt")

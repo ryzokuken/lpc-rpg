@@ -1,0 +1,423 @@
+[gd_scene load_steps=23 format=3 uid="uid://pl3qq4i77l7c"]
+
+[ext_resource type="Theme" uid="uid://drtks6vtivflm" path="res://themes/default.tres" id="1_qw0r6"]
+[ext_resource type="Script" uid="uid://cd0ymx1sb1d46" path="res://scripts/inventoryui.gd" id="2_40feg"]
+[ext_resource type="Texture2D" uid="uid://tmx3td2neyhk" path="res://sprites/interface/kenney_ui-pack-pixel-adventure/Tiles/Small tiles/Thick outline/tile_0025.png" id="2_k86sa"]
+[ext_resource type="Texture2D" uid="uid://djahcwqqxcg45" path="res://sprites/interface/496_RPG_icons/W_Axe004.png" id="3_nq6oc"]
+[ext_resource type="Texture2D" uid="uid://c6ff4f12kwm05" path="res://sprites/interface/496_RPG_icons/I_GoldCoin.png" id="3_yyk2a"]
+[ext_resource type="Texture2D" uid="uid://bk84s1wd00k8h" path="res://sprites/interface/496_RPG_icons/A_Armor04.png" id="4_brsb2"]
+[ext_resource type="Texture2D" uid="uid://bfg0yvkysyxa6" path="res://sprites/interface/496_RPG_icons/W_Bow02.png" id="4_k86sa"]
+[ext_resource type="Texture2D" uid="uid://c86vfpyqspo1u" path="res://sprites/interface/496_RPG_icons/I_C_Mulberry.png" id="4_uae8j"]
+[ext_resource type="Texture2D" uid="uid://qrk165n2m8jj" path="res://sprites/interface/496_RPG_icons/C_Hat01.png" id="5_k86sa"]
+[ext_resource type="Texture2D" uid="uid://daoxlt7wves73" path="res://sprites/interface/496_RPG_icons/A_Shoes02.png" id="5_nq6oc"]
+[ext_resource type="Texture2D" uid="uid://gadk1h4stwlv" path="res://sprites/interface/496_RPG_icons/Ac_Necklace05.png" id="6_k86sa"]
+[ext_resource type="Texture2D" uid="uid://cv8nd77plfvq4" path="res://sprites/interface/496_RPG_icons/I_Water.png" id="6_td2ew"]
+[ext_resource type="Texture2D" uid="uid://dopbwf0gwcute" path="res://sprites/interface/496_RPG_icons/Ac_Ring01.png" id="7_40feg"]
+[ext_resource type="Texture2D" uid="uid://dybe5wyt5lxap" path="res://sprites/interface/496_RPG_icons/I_Map.png" id="7_ylenm"]
+[ext_resource type="Texture2D" uid="uid://difa0356iu1uh" path="res://sprites/interface/496_RPG_icons/I_Telescope.png" id="8_0df5h"]
+[ext_resource type="Texture2D" uid="uid://7ya2xxnyqkl0" path="res://sprites/interface/496_RPG_icons/I_Key01.png" id="9_fiysm"]
+[ext_resource type="Texture2D" uid="uid://df65i3hpo47mh" path="res://sprites/interface/496_RPG_icons/I_Clover.png" id="10_brsb2"]
+[ext_resource type="Texture2D" uid="uid://b7abbjftpd0th" path="res://sprites/interface/496_RPG_icons/I_Coal.png" id="11_nq6oc"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_brsb2"]
+font_size = 64
+
+[sub_resource type="LabelSettings" id="LabelSettings_fiysm"]
+font_size = 64
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_ylenm"]
+font_size = 32
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_0df5h"]
+font_size = 64
+font_color = Color(0, 0, 0, 1)
+
+[node name="Inventory" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource("1_qw0r6")
+script = ExtResource("2_40feg")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TopBar" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="InventoryLabel" type="Label" parent="VBoxContainer/TopBar"]
+layout_mode = 2
+size_flags_horizontal = 6
+theme = ExtResource("1_qw0r6")
+text = "Inventory"
+label_settings = SubResource("LabelSettings_brsb2")
+
+[node name="CloseButton" type="TextureButton" parent="VBoxContainer/TopBar"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource("2_k86sa")
+stretch_mode = 4
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("1_qw0r6")
+theme_override_constants/separation = 4
+
+[node name="Loadout" type="Panel" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.4
+theme = ExtResource("1_qw0r6")
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/HBoxContainer/Loadout"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_qw0r6")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/HBoxContainer/Loadout/MarginContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer/Loadout/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme = ExtResource("1_qw0r6")
+text = "Loadout"
+label_settings = SubResource("LabelSettings_fiysm")
+
+[node name="GridContainer" type="GridContainer" parent="VBoxContainer/HBoxContainer/Loadout/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+columns = 2
+
+[node name="Melee" type="VBoxContainer" parent="VBoxContainer/HBoxContainer/Loadout/MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer/Loadout/MarginContainer/VBoxContainer/GridContainer/Melee"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Melee"
+label_settings = SubResource("LabelSettings_ylenm")
+
+[node name="Icon" type="TextureRect" parent="VBoxContainer/HBoxContainer/Loadout/MarginContainer/VBoxContainer/GridContainer/Melee"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("3_nq6oc")
+stretch_mode = 4
+
+[node name="Item" type="Label" parent="VBoxContainer/HBoxContainer/Loadout/MarginContainer/VBoxContainer/GridContainer/Melee"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Rare Axe"
+label_settings = SubResource("LabelSettings_ylenm")
+horizontal_alignment = 2
+
+[node name="Ranged" type="VBoxContainer" parent="VBoxContainer/HBoxContainer/Loadout/MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer/Loadout/MarginContainer/VBoxContainer/GridContainer/Ranged"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Ranged"
+label_settings = SubResource("LabelSettings_ylenm")
+
+[node name="Icon" type="TextureRect" parent="VBoxContainer/HBoxContainer/Loadout/MarginContainer/VBoxContainer/GridContainer/Ranged"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("4_k86sa")
+stretch_mode = 4
+
+[node name="Item" type="Label" parent="VBoxContainer/HBoxContainer/Loadout/MarginContainer/VBoxContainer/GridContainer/Ranged"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Longbow"
+label_settings = SubResource("LabelSettings_ylenm")
+horizontal_alignment = 2
+
+[node name="Helmet" type="VBoxContainer" parent="VBoxContainer/HBoxContainer/Loadout/MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer/Loadout/MarginContainer/VBoxContainer/GridContainer/Helmet"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Helmet"
+label_settings = SubResource("LabelSettings_ylenm")
+
+[node name="Icon" type="TextureRect" parent="VBoxContainer/HBoxContainer/Loadout/MarginContainer/VBoxContainer/GridContainer/Helmet"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("5_k86sa")
+stretch_mode = 4
+
+[node name="Item" type="Label" parent="VBoxContainer/HBoxContainer/Loadout/MarginContainer/VBoxContainer/GridContainer/Helmet"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Simple Hat"
+label_settings = SubResource("LabelSettings_ylenm")
+horizontal_alignment = 2
+
+[node name="Armor" type="VBoxContainer" parent="VBoxContainer/HBoxContainer/Loadout/MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer/Loadout/MarginContainer/VBoxContainer/GridContainer/Armor"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Armor"
+label_settings = SubResource("LabelSettings_ylenm")
+
+[node name="Icon" type="TextureRect" parent="VBoxContainer/HBoxContainer/Loadout/MarginContainer/VBoxContainer/GridContainer/Armor"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("4_brsb2")
+stretch_mode = 4
+
+[node name="Item" type="Label" parent="VBoxContainer/HBoxContainer/Loadout/MarginContainer/VBoxContainer/GridContainer/Armor"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Reforged Cuirass"
+label_settings = SubResource("LabelSettings_ylenm")
+horizontal_alignment = 2
+
+[node name="Boots" type="VBoxContainer" parent="VBoxContainer/HBoxContainer/Loadout/MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer/Loadout/MarginContainer/VBoxContainer/GridContainer/Boots"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Boots"
+label_settings = SubResource("LabelSettings_ylenm")
+
+[node name="Icon" type="TextureRect" parent="VBoxContainer/HBoxContainer/Loadout/MarginContainer/VBoxContainer/GridContainer/Boots"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("5_nq6oc")
+stretch_mode = 4
+
+[node name="Item" type="Label" parent="VBoxContainer/HBoxContainer/Loadout/MarginContainer/VBoxContainer/GridContainer/Boots"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Hooked Boots"
+label_settings = SubResource("LabelSettings_ylenm")
+horizontal_alignment = 2
+
+[node name="Ring" type="VBoxContainer" parent="VBoxContainer/HBoxContainer/Loadout/MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer/Loadout/MarginContainer/VBoxContainer/GridContainer/Ring"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Ring"
+label_settings = SubResource("LabelSettings_ylenm")
+
+[node name="Icon" type="TextureRect" parent="VBoxContainer/HBoxContainer/Loadout/MarginContainer/VBoxContainer/GridContainer/Ring"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("7_40feg")
+stretch_mode = 4
+
+[node name="Item" type="Label" parent="VBoxContainer/HBoxContainer/Loadout/MarginContainer/VBoxContainer/GridContainer/Ring"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Silver Ring"
+label_settings = SubResource("LabelSettings_ylenm")
+horizontal_alignment = 2
+
+[node name="Necklace" type="VBoxContainer" parent="VBoxContainer/HBoxContainer/Loadout/MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer/Loadout/MarginContainer/VBoxContainer/GridContainer/Necklace"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Necklace"
+label_settings = SubResource("LabelSettings_ylenm")
+
+[node name="Icon" type="TextureRect" parent="VBoxContainer/HBoxContainer/Loadout/MarginContainer/VBoxContainer/GridContainer/Necklace"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("6_k86sa")
+stretch_mode = 4
+
+[node name="Item" type="Label" parent="VBoxContainer/HBoxContainer/Loadout/MarginContainer/VBoxContainer/GridContainer/Necklace"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Vitality Amulet"
+label_settings = SubResource("LabelSettings_ylenm")
+horizontal_alignment = 2
+
+[node name="Backpack" type="Panel" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.5
+theme = ExtResource("1_qw0r6")
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/HBoxContainer/Backpack"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_qw0r6")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/HBoxContainer/Backpack/MarginContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer/Backpack/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme = ExtResource("1_qw0r6")
+text = "Backpack"
+label_settings = SubResource("LabelSettings_0df5h")
+
+[node name="ItemList" type="ItemList" parent="VBoxContainer/HBoxContainer/Backpack/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+item_count = 9
+fixed_icon_size = Vector2i(64, 64)
+item_0/text = "Gold x 100"
+item_0/icon = ExtResource("3_yyk2a")
+item_1/text = "Berries x 5"
+item_1/icon = ExtResource("4_uae8j")
+item_2/text = "Rare Axe"
+item_2/icon = ExtResource("3_nq6oc")
+item_3/text = "Water x 5"
+item_3/icon = ExtResource("6_td2ew")
+item_4/text = "Map"
+item_4/icon = ExtResource("7_ylenm")
+item_5/text = "Telescope"
+item_5/icon = ExtResource("8_0df5h")
+item_6/text = "Key"
+item_6/icon = ExtResource("9_fiysm")
+item_7/text = "Clover x 5"
+item_7/icon = ExtResource("10_brsb2")
+item_8/text = "Coal x 50"
+item_8/icon = ExtResource("11_nq6oc")
+
+[node name="Details" type="Panel" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.4
+theme = ExtResource("1_qw0r6")
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/HBoxContainer/Details"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_qw0r6")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/HBoxContainer/Details/MarginContainer"]
+layout_mode = 2
+
+[node name="Header" type="Label" parent="VBoxContainer/HBoxContainer/Details/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme = ExtResource("1_qw0r6")
+text = "Details"
+label_settings = SubResource("LabelSettings_fiysm")
+
+[node name="Icon" type="TextureRect" parent="VBoxContainer/HBoxContainer/Details/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(160, 160)
+layout_mode = 2
+texture = ExtResource("3_nq6oc")
+stretch_mode = 5
+
+[node name="Name" type="Label" parent="VBoxContainer/HBoxContainer/Details/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme = ExtResource("1_qw0r6")
+text = "Rare Axe"
+label_settings = SubResource("LabelSettings_fiysm")
+
+[node name="Description" type="Label" parent="VBoxContainer/HBoxContainer/Details/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("1_qw0r6")
+text = "This is a rare axe, forged ostensibly in the ancient forges of the Dwarven Masters. It is said to bless the owner with a better luck bashing skulls."
+label_settings = SubResource("LabelSettings_ylenm")
+autowrap_mode = 2
+
+[node name="GridContainer" type="GridContainer" parent="VBoxContainer/HBoxContainer/Details/MarginContainer/VBoxContainer"]
+layout_mode = 2
+columns = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer/Details/MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "Weight"
+label_settings = SubResource("LabelSettings_ylenm")
+
+[node name="Label2" type="Label" parent="VBoxContainer/HBoxContainer/Details/MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+text = "2500g"
+label_settings = SubResource("LabelSettings_ylenm")
+horizontal_alignment = 2
+
+[node name="Label3" type="Label" parent="VBoxContainer/HBoxContainer/Details/MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "Value"
+label_settings = SubResource("LabelSettings_ylenm")
+
+[node name="Label4" type="Label" parent="VBoxContainer/HBoxContainer/Details/MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+text = "7000"
+label_settings = SubResource("LabelSettings_ylenm")
+horizontal_alignment = 2
+
+[node name="Label5" type="Label" parent="VBoxContainer/HBoxContainer/Details/MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "Quantity"
+label_settings = SubResource("LabelSettings_ylenm")
+
+[node name="Label6" type="Label" parent="VBoxContainer/HBoxContainer/Details/MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+text = "1"
+label_settings = SubResource("LabelSettings_ylenm")
+horizontal_alignment = 2
+
+[connection signal="button_up" from="VBoxContainer/TopBar/CloseButton" to="." method="_on_close_button_button_up"]
+[connection signal="item_selected" from="VBoxContainer/HBoxContainer/Backpack/MarginContainer/VBoxContainer/ItemList" to="." method="_on_item_list_item_selected"]

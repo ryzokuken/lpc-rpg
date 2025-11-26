@@ -1,0 +1,131 @@
+{
+  "bodyTypeName": "female",
+  "url": "https://liberatedpixelcup.github.io/Universal-LPC-Spritesheet-Character-Generator/#?body=Body_color_light&head=Human_male_light&hair=Shoulderl_dark_brown&shoes=Revised_Shoes_black&legs=Plain_skirt_leather&clothes=Longsleeve_2_slate&apron=Apron_white&sex=female",
+  "spritesheets": "https://liberatedpixelcup.github.io/Universal-LPC-Spritesheet-Character-Generator/spritesheets/",
+  "version": 1,
+  "datetime": "10/11/2025, 11:49:01",
+  "credits": [
+    {
+      "fileName": "body/bodies/female/light.png",
+      "licenses": "OGA-BY 3.0,CC-BY-SA 3.0,GPL 3.0",
+      "authors": "Benjamin K. Smith (BenCreating),bluecarrot16,TheraHedwig,Evert,MuffinElZangano,Durrani,Pierre Vigier (pvigier),ElizaWy,Matthew Krohn (makrohn),Johannes Sjölund (wulax),Stephen Challener (Redshrike)",
+      "urls": "https://opengameart.org/content/liberated-pixel-cup-lpc-base-assets-sprites-map-tiles,https://opengameart.org/content/lpc-medieval-fantasy-character-sprites,https://opengameart.org/content/lpc-ladies,https://opengameart.org/content/lpc-7-womens-shirts,https://opengameart.org/content/lpc-jump-expanded,https://opengameart.org/content/lpc-be-seated,https://opengameart.org/content/lpc-revised-character-basics,https://gitlab.com/vagabondgame/lpc-characters,https://opengameart.org/content/lpc-male-jumping-animation-by-durrani,https://opengameart.org/content/lpc-runcycle-and-diagonal-walkcycle",
+      "notes": "see details at https://opengameart.org/content/lpc-character-bases"
+    },
+    {
+      "fileName": "head/heads/human/male/light.png",
+      "licenses": "OGA-BY 3.0,CC-BY-SA 3.0,GPL 3.0",
+      "authors": "bluecarrot16,Benjamin K. Smith (BenCreating),Stephen Challener (Redshrike)",
+      "urls": "https://opengameart.org/content/liberated-pixel-cup-lpc-base-assets-sprites-map-tiles,https://opengameart.org/content/lpc-character-bases",
+      "notes": "original head by Redshrike, tweaks by BenCreating, modular version by bluecarrot16"
+    },
+    {
+      "fileName": "hair/shoulderl/adult/fg/dark_brown.png",
+      "licenses": "OGA-BY 3.0,CC-BY-SA 3.0,GPL 3.0",
+      "authors": "JaidynReiman,Lanea Zimmerman (Sharm),Manuel Riecke (MrBeast)",
+      "urls": "https://opengameart.org/content/liberated-pixel-cup-lpc-base-assets-sprites-map-tiles,https://github.com/jrconway3/Universal-LPC-spritesheet/commit/c32ce8a7edd9fc7fe7daa62a39cf64e5946020a2,https://opengameart.org/content/lpc-expanded-hair",
+      "notes": ""
+    },
+    {
+      "fileName": "hair/shoulderl/adult/bg/dark_brown.png",
+      "licenses": "OGA-BY 3.0,CC-BY-SA 3.0,GPL 3.0",
+      "authors": "JaidynReiman,Lanea Zimmerman (Sharm),Manuel Riecke (MrBeast)",
+      "urls": "https://opengameart.org/content/liberated-pixel-cup-lpc-base-assets-sprites-map-tiles,https://github.com/jrconway3/Universal-LPC-spritesheet/commit/c32ce8a7edd9fc7fe7daa62a39cf64e5946020a2,https://opengameart.org/content/lpc-expanded-hair",
+      "notes": ""
+    },
+    {
+      "fileName": "torso/clothes/longsleeve/longsleeve2/female/slate.png",
+      "licenses": "OGA-BY 3.0",
+      "authors": "ElizaWy,JaidynReiman,Stephen Challener (Redshrike),Johannes Sjölund (wulax)",
+      "urls": "https://opengameart.org/content/lpc-revised-character-basics,https://github.com/ElizaWy/LPC/tree/main/Characters/Clothing,https://opengameart.org/content/lpc-expanded-sit-run-jump-more,https://opengameart.org/content/lpc-expanded-simple-shirts",
+      "notes": "original by ElizaWy; spellcast/thrust/shoot/hurt/male adapted from original by JaidynReiman"
+    },
+    {
+      "fileName": "torso/aprons/apron/female/white.png",
+      "licenses": "OGA-BY 3.0,CC-BY-SA 3.0,GPL 2.0,GPL 3.0",
+      "authors": "Nila122",
+      "urls": "https://opengameart.org/content/lpc-aprons",
+      "notes": ""
+    },
+    {
+      "fileName": "legs/skirts/plain/female/leather.png",
+      "licenses": "OGA-BY 3.0,CC-BY-SA 3.0,GPL 3.0",
+      "authors": "bluecarrot16,Pierre Vigier (pvigier),Johannes Sjölund (wulax)",
+      "urls": "https://opengameart.org/content/lpc-medieval-fantasy-character-sprites",
+      "notes": "original by wulax, edited for female base by pvigier, edited for v3 base by bluecarrot16"
+    },
+    {
+      "fileName": "feet/shoes/revised/thin/black.png",
+      "licenses": "OGA-BY 3.0",
+      "authors": "ElizaWy,JaidynReiman",
+      "urls": "https://github.com/ElizaWy/LPC/tree/main/Characters/Clothing,https://opengameart.org/content/lpc-expanded-sit-run-jump-more,https://opengameart.org/content/lpc-expanded-socks-shoes",
+      "notes": "original by ElizaWy, remaining frames by JaidynReiman"
+    }
+  ],
+  "layers": [
+    {
+      "fileName": "hair/shoulderl/adult/bg/dark_brown.png",
+      "zPos": 9,
+      "parentName": "hair",
+      "name": "Shoulderl",
+      "variant": "dark brown",
+      "supportedAnimations": "spellcast,thrust,walk,slash,shoot,hurt,watering,idle,jump,run,sit,emote,climb,combat,1h_slash,1h_backslash,1h_halfslash"
+    },
+    {
+      "fileName": "body/bodies/female/light.png",
+      "zPos": 10,
+      "parentName": "body",
+      "name": "Body_color",
+      "variant": "light",
+      "supportedAnimations": "spellcast,thrust,walk,slash,shoot,hurt,watering,idle,jump,run,sit,emote,climb,combat,1h_slash,1h_backslash,1h_halfslash"
+    },
+    {
+      "fileName": "feet/shoes/revised/thin/black.png",
+      "zPos": 15,
+      "parentName": "shoes",
+      "name": "Revised_Shoes",
+      "variant": "black",
+      "supportedAnimations": "spellcast,thrust,walk,slash,shoot,hurt,watering,idle,jump,run,sit,emote,climb,combat,1h_slash,1h_backslash,1h_halfslash"
+    },
+    {
+      "fileName": "legs/skirts/plain/female/leather.png",
+      "zPos": 20,
+      "parentName": "legs",
+      "name": "Plain_skirt",
+      "variant": "leather",
+      "supportedAnimations": "spellcast,thrust,walk,slash,shoot,hurt,watering"
+    },
+    {
+      "fileName": "torso/clothes/longsleeve/longsleeve2/female/slate.png",
+      "zPos": 35,
+      "parentName": "clothes",
+      "name": "Longsleeve_2",
+      "variant": "slate",
+      "supportedAnimations": "spellcast,thrust,walk,slash,shoot,hurt,watering,idle,jump,run,sit,emote,climb,combat,1h_slash,1h_backslash,1h_halfslash"
+    },
+    {
+      "fileName": "torso/aprons/apron/female/white.png",
+      "zPos": 40,
+      "parentName": "apron",
+      "name": "Apron",
+      "variant": "white",
+      "supportedAnimations": "spellcast,thrust,walk,slash,shoot,hurt,watering"
+    },
+    {
+      "fileName": "head/heads/human/male/light.png",
+      "zPos": 100,
+      "parentName": "head",
+      "name": "Human_male",
+      "variant": "light",
+      "supportedAnimations": "spellcast,thrust,walk,slash,shoot,hurt,watering,idle,jump,run,sit,emote,climb,combat,1h_slash,1h_backslash,1h_halfslash"
+    },
+    {
+      "fileName": "hair/shoulderl/adult/fg/dark_brown.png",
+      "zPos": 120,
+      "parentName": "hair",
+      "name": "Shoulderl",
+      "variant": "dark brown",
+      "supportedAnimations": "spellcast,thrust,walk,slash,shoot,hurt,watering,idle,jump,run,sit,emote,climb,combat,1h_slash,1h_backslash,1h_halfslash"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://dwx7lr2se7l1f"]
+
+[ext_resource type="Texture2D" uid="uid://vs8peoth8k2x" path="res://sprites/interface/496_RPG_icons/I_Book.png" id="1_ups48"]
+[ext_resource type="Script" uid="uid://djurp6pk6084b" path="res://scripts/item.gd" id="2_2nvir"]
+
+[resource]
+script = ExtResource("2_2nvir")
+name = "Book"
+icon = ExtResource("1_ups48")
+type = 2
+description = "All work and no play makes Jack a dull boy."
+weight = 1
+value = 100
+metadata/_custom_type_script = "uid://djurp6pk6084b"

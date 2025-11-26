@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://bhte3oj5jfgi"]
+
+[ext_resource type="Script" uid="uid://djurp6pk6084b" path="res://scripts/item.gd" id="1_ik4h4"]
+[ext_resource type="Texture2D" uid="uid://bhfx83onrxcqo" path="res://sprites/interface/496_RPG_icons/Ac_Necklace01.png" id="2_cubsp"]
+
+[resource]
+script = ExtResource("1_ik4h4")
+name = "Ruby Necklace"
+icon = ExtResource("2_cubsp")
+description = "A gold necklace laid with a shimmering ruby. This shall make a handsome wedding gift someday."
+weight = 1
+value = 500
+metadata/_custom_type_script = "uid://djurp6pk6084b"

@@ -1,0 +1,17 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://dw676mc4ietwf"
+
+[deps]
+
+files=["res://sprites/characters/male-bare/credits/credits.notes.translation", "res://sprites/characters/male-bare/credits/credits.authors.translation", "res://sprites/characters/male-bare/credits/credits.licenses.translation", "res://sprites/characters/male-bare/credits/credits.urls.translation"]
+
+source_file="res://sprites/characters/male-bare/credits/credits.csv"
+dest_files=["res://sprites/characters/male-bare/credits/credits.notes.translation", "res://sprites/characters/male-bare/credits/credits.authors.translation", "res://sprites/characters/male-bare/credits/credits.licenses.translation", "res://sprites/characters/male-bare/credits/credits.urls.translation"]
+
+[params]
+
+compress=true
+delimiter=0

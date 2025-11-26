@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://cxqr05womian"]
+
+[ext_resource type="Texture2D" uid="uid://dopbwf0gwcute" path="res://sprites/interface/496_RPG_icons/Ac_Ring01.png" id="1_1dwvk"]
+[ext_resource type="Script" uid="uid://djurp6pk6084b" path="res://scripts/item.gd" id="1_8qw6n"]
+
+[resource]
+script = ExtResource("1_8qw6n")
+name = "Simple Ring"
+icon = ExtResource("1_1dwvk")
+description = "A simple silver ring. Beyond the means of a humble peasant."
+weight = 1
+value = 50
+metadata/_custom_type_script = "uid://djurp6pk6084b"

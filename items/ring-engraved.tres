@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://bmssp65n8mxdg"]
+
+[ext_resource type="Texture2D" uid="uid://bk0vngqh0ao2m" path="res://sprites/interface/496_RPG_icons/Ac_Ring02.png" id="1_rckp6"]
+[ext_resource type="Script" uid="uid://djurp6pk6084b" path="res://scripts/item.gd" id="2_xk4i8"]
+
+[resource]
+script = ExtResource("2_xk4i8")
+name = "Engraved Ring"
+icon = ExtResource("1_rckp6")
+description = "A silver ring with beautiful engraving. It must've been a lover's gift."
+weight = 1
+value = 200
+metadata/_custom_type_script = "uid://djurp6pk6084b"

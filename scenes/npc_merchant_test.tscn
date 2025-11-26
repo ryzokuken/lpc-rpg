@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://dbd3tcxjs6puv"]
+
+[ext_resource type="Script" uid="uid://ciukkn3755bdv" path="res://scripts/npc_merchant_test.gd" id="1_qsld0"]
+[ext_resource type="PackedScene" uid="uid://bsn0hna1xhrdm" path="res://scenes/npc.tscn" id="2_eipes"]
+
+[node name="NpcMerchantTest" type="Node2D"]
+script = ExtResource("1_qsld0")
+
+[node name="NPC" parent="." instance=ExtResource("2_eipes")]
+character_name = "Merchant"

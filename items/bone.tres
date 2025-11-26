@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://jbs35e28da2a"]
+
+[ext_resource type="Texture2D" uid="uid://coy8gwkrhi4rd" path="res://sprites/interface/496_RPG_icons/I_Bone.png" id="1_bwi4w"]
+[ext_resource type="Script" uid="uid://djurp6pk6084b" path="res://scripts/item.gd" id="2_bhu1v"]
+
+[resource]
+script = ExtResource("2_bhu1v")
+name = "Bone"
+icon = ExtResource("1_bwi4w")
+type = 2
+description = "A simple bone: no more, no less. Who knows where it's from."
+weight = 1
+metadata/_custom_type_script = "uid://djurp6pk6084b"

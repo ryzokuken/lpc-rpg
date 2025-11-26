@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://b3qfkvsf7nbw1"]
+
+[ext_resource type="Texture2D" uid="uid://df65i3hpo47mh" path="res://sprites/interface/496_RPG_icons/I_Clover.png" id="1_yxtnq"]
+[ext_resource type="Script" uid="uid://djurp6pk6084b" path="res://scripts/item.gd" id="2_cionb"]
+
+[resource]
+script = ExtResource("2_cionb")
+name = "Clover"
+icon = ExtResource("1_yxtnq")
+type = 2
+description = "Legend says it brings good luck, but it's still just a leaf."
+value = 20
+metadata/_custom_type_script = "uid://djurp6pk6084b"

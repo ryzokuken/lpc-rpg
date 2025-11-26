@@ -1,0 +1,12 @@
+[gd_resource type="StyleBoxTexture" load_steps=2 format=3 uid="uid://dep5hts02vwk0"]
+
+[ext_resource type="Texture2D" uid="uid://eyuaiuky81qc" path="res://sprites/interface/kenney_ui-pack-rpg-expansion/PNG/buttonLong_brown.png" id="1_5nc07"]
+
+[resource]
+texture = ExtResource("1_5nc07")
+texture_margin_left = 8.0
+texture_margin_top = 8.0
+texture_margin_right = 8.0
+texture_margin_bottom = 12.0
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
