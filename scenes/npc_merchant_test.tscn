@@ -1,10 +1,29 @@
-[gd_scene load_steps=3 format=3 uid="uid://dbd3tcxjs6puv"]
+[gd_scene load_steps=4 format=3 uid="uid://dbd3tcxjs6puv"]
 
 [ext_resource type="Script" uid="uid://ciukkn3755bdv" path="res://scripts/npc_merchant_test.gd" id="1_qsld0"]
 [ext_resource type="PackedScene" uid="uid://bsn0hna1xhrdm" path="res://scenes/npc.tscn" id="2_eipes"]
+[ext_resource type="Theme" uid="uid://drtks6vtivflm" path="res://themes/default.tres" id="3_eipes"]
 
 [node name="NpcMerchantTest" type="Node2D"]
 script = ExtResource("1_qsld0")
 
 [node name="NPC" parent="." instance=ExtResource("2_eipes")]
+position = Vector2(280, 152)
 character_name = "Merchant"
+npc_type = 0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+theme = ExtResource("3_eipes")
+
+[node name="KillNPC" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+text = "Kill NPC"
+
+[node name="ReviveNPC" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+text = "Revive NPC"
+
+[connection signal="button_up" from="HBoxContainer/KillNPC" to="." method="_on_kill_npc_button_up"]
+[connection signal="button_up" from="HBoxContainer/ReviveNPC" to="." method="_on_revive_npc_button_up"]

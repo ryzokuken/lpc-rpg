@@ -2,7 +2,7 @@
 
 [ext_resource type="Theme" uid="uid://drtks6vtivflm" path="res://themes/default.tres" id="1_qw0r6"]
 [ext_resource type="Script" uid="uid://cd0ymx1sb1d46" path="res://scripts/inventoryui.gd" id="2_40feg"]
-[ext_resource type="Texture2D" uid="uid://tmx3td2neyhk" path="res://sprites/interface/kenney_ui-pack-pixel-adventure/Tiles/Small tiles/Thick outline/tile_0025.png" id="2_k86sa"]
+[ext_resource type="Texture2D" uid="uid://d3g6eg5k2lagn" path="res://sprites/interface/kenney_ui-pack-adventure/PNG/Default/button_brown_close.png" id="3_40feg"]
 [ext_resource type="Texture2D" uid="uid://djahcwqqxcg45" path="res://sprites/interface/496_RPG_icons/W_Axe004.png" id="3_nq6oc"]
 [ext_resource type="Texture2D" uid="uid://c6ff4f12kwm05" path="res://sprites/interface/496_RPG_icons/I_GoldCoin.png" id="3_yyk2a"]
 [ext_resource type="Texture2D" uid="uid://bk84s1wd00k8h" path="res://sprites/interface/496_RPG_icons/A_Armor04.png" id="4_brsb2"]
@@ -34,25 +34,17 @@ font_color = Color(0, 0, 0, 1)
 font_size = 64
 font_color = Color(0, 0, 0, 1)
 
-[node name="Inventory" type="Control"]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-theme = ExtResource("1_qw0r6")
+[node name="Inventory" type="CanvasLayer"]
 script = ExtResource("2_40feg")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
-layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
 
 [node name="TopBar" type="HBoxContainer" parent="VBoxContainer"]
 layout_mode = 2
@@ -65,12 +57,12 @@ text = "Inventory"
 label_settings = SubResource("LabelSettings_brsb2")
 
 [node name="CloseButton" type="TextureButton" parent="VBoxContainer/TopBar"]
-custom_minimum_size = Vector2(60, 60)
+custom_minimum_size = Vector2(96, 48)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-texture_normal = ExtResource("2_k86sa")
-stretch_mode = 4
+texture_normal = ExtResource("3_40feg")
+stretch_mode = 5
 
 [node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
 layout_mode = 2

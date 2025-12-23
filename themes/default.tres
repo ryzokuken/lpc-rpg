@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=10 format=3 uid="uid://drtks6vtivflm"]
+[gd_resource type="Theme" load_steps=13 format=3 uid="uid://drtks6vtivflm"]
 
 [ext_resource type="Texture2D" uid="uid://ddnswm7caplvx" path="res://sprites/interface/kenney_ui-pack-rpg-expansion/PNG/panelInset_brown.png" id="1_1fv3y"]
 [ext_resource type="Texture2D" uid="uid://ccwee7ui4wcmv" path="res://sprites/interface/kenney_ui-pack-rpg-expansion/PNG/buttonLong_grey.png" id="1_d3e7e"]
@@ -6,6 +6,8 @@
 [ext_resource type="StyleBox" uid="uid://dep5hts02vwk0" path="res://themes/brown_button.tres" id="2_cgbfu"]
 [ext_resource type="Texture2D" uid="uid://d1s4lg10nrtsa" path="res://sprites/interface/kenney_ui-pack-rpg-expansion/PNG/buttonLong_brown_pressed.png" id="2_d3e7e"]
 [ext_resource type="FontFile" uid="uid://c0b8tb0unrnca" path="res://fonts/Kenney Pixel.ttf" id="2_gnsgt"]
+[ext_resource type="StyleBox" uid="uid://rf1yer2cpfla" path="res://themes/box-brown-borders.tres" id="4_cgbfu"]
+[ext_resource type="Texture2D" uid="uid://dpo4jk5xtnmbo" path="res://sprites/interface/kenney_ui-pack-adventure/Vector/panel_border_brown_detail.svg" id="4_k1vgm"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ck2yl"]
 texture = ExtResource("1_d3e7e")
@@ -25,12 +27,21 @@ texture_margin_bottom = 8.0
 axis_stretch_horizontal = 1
 axis_stretch_vertical = 1
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ywx0d"]
+texture = ExtResource("4_k1vgm")
+texture_margin_left = 16.0
+texture_margin_top = 16.0
+texture_margin_right = 16.0
+texture_margin_bottom = 16.0
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_l6fbw"]
 texture = ExtResource("1_1fv3y")
-texture_margin_left = 6.0
-texture_margin_top = 6.0
-texture_margin_right = 6.0
-texture_margin_bottom = 6.0
+texture_margin_left = 16.0
+texture_margin_top = 16.0
+texture_margin_right = 16.0
+texture_margin_bottom = 16.0
 axis_stretch_horizontal = 1
 axis_stretch_vertical = 1
 
@@ -44,7 +55,12 @@ Button/styles/hover = ExtResource("2_cgbfu")
 Button/styles/normal = ExtResource("2_cgbfu")
 Button/styles/pressed = SubResource("StyleBoxTexture_k1vgm")
 ItemList/colors/font_color = Color(1, 1, 1, 1)
+ItemList/styles/hovered = SubResource("StyleBoxTexture_ywx0d")
+ItemList/styles/hovered_selected = ExtResource("4_cgbfu")
+ItemList/styles/hovered_selected_focus = ExtResource("4_cgbfu")
 ItemList/styles/panel = SubResource("StyleBoxTexture_l6fbw")
+ItemList/styles/selected = ExtResource("4_cgbfu")
+ItemList/styles/selected_focus = ExtResource("4_cgbfu")
 Label/colors/font_color = Color(0, 0, 0, 1)
 MarginContainer/constants/margin_bottom = 10
 MarginContainer/constants/margin_left = 10

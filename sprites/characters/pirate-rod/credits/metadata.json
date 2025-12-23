@@ -1,0 +1,16 @@
+{
+  "exportTimestamp": "2025-12-16T01-10-09",
+  "bodyType": "male",
+  "standardAnimations": {
+    "exported": [],
+    "failed": []
+  },
+  "customAnimations": {
+    "exported": [
+      "tool_rod"
+    ],
+    "failed": []
+  },
+  "frameSize": 64,
+  "frameCounts": {}
+}

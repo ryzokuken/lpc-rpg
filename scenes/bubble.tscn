@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://dagnto4e2g6km"]
+
+[ext_resource type="Script" uid="uid://b252a8d7ovfbl" path="res://scripts/bubble.gd" id="1_2vdav"]
+[ext_resource type="Theme" uid="uid://drtks6vtivflm" path="res://themes/default.tres" id="2_pm753"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_3f0wh"]
+radius = 36.0
+
+[node name="Bubble" type="Area2D"]
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("1_2vdav")
+
+[node name="Shape" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_3f0wh")
+
+[node name="Menu" type="PopupMenu" parent="."]
+oversampling_override = 1.0
+initial_position = 1
+size = Vector2i(100, 50)
+theme = ExtResource("2_pm753")
+
+[connection signal="id_pressed" from="Menu" to="." method="_on_menu_id_pressed"]
+[connection signal="popup_hide" from="Menu" to="." method="_on_menu_popup_hide"]

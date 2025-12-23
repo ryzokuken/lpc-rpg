@@ -1,0 +1,26 @@
+~ start
+{{character_name}}: Hey! What are you doing over there sneaking around like that?
+Player: Uhhhh, nothing! I was just appreciating the design!
+{{character_name}}: Yeeeeah I don't think so, I'm calling the guards.
+- Persuade ({{persuasion_difficulty * 100}}%)
+	Player: Seriously, is this imported? It looks exquisite!
+	{{character_name}}: Exquisite you say? Heh, well, I don't like to brag but it's certainly not cheap...
+	Player: I could tell! You have such great taste!
+	{{character_name}}: Well, thanks. It's not everyday you chat with a person of culture around here.
+	Player: Farewell, then.
+- Intimidate ({{intimidation_difficulty * 100}}%)
+	Player: You better not talk about this!
+	{{character_name}}: This is absolutely vile... I hope you rot in hell.
+	Player: You wish.
+- Decieve ({{deception_difficulty * 100}}%)
+	Player: I was searching for a lost heirloom, it was dear to my heart, sorry.
+	{{character_name}}: It's not here!
+	Player: Okay, apologies then. I'll take my leave.
+- Pay up (10 silver)
+	Player: Here, look what I have for you!
+	{{character_name}}: You better not do this again...
+	Player: I promise!
+- Run away
+	Player: I should run!
+	{{character_name}}: Someone call the guards!
+=> END

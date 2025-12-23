@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dfht4fvllmlod"
+path="res://.godot/imported/Pirate 8.ogg-cbd5d93a4ed3f235a99723cae8f542dc.oggvorbisstr"
+
+[deps]
+
+source_file="res://sounds/Pirate Music Pack/ogg/Pirate 8.ogg"
+dest_files=["res://.godot/imported/Pirate 8.ogg-cbd5d93a4ed3f235a99723cae8f542dc.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

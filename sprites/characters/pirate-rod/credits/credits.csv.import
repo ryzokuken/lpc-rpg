@@ -1,0 +1,19 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://40r3shq3hlpi"
+
+[deps]
+
+files=["res://sprites/characters/pirate-rod/credits/credits.notes.translation", "res://sprites/characters/pirate-rod/credits/credits.authors.translation", "res://sprites/characters/pirate-rod/credits/credits.licenses.translation", "res://sprites/characters/pirate-rod/credits/credits.urls.translation"]
+
+source_file="res://sprites/characters/pirate-rod/credits/credits.csv"
+dest_files=["res://sprites/characters/pirate-rod/credits/credits.notes.translation", "res://sprites/characters/pirate-rod/credits/credits.authors.translation", "res://sprites/characters/pirate-rod/credits/credits.licenses.translation", "res://sprites/characters/pirate-rod/credits/credits.urls.translation"]
+
+[params]
+
+compress=1
+delimiter=0
+unescape_keys=false
+unescape_translations=true

@@ -1,0 +1,147 @@
+[gd_scene load_steps=4 format=3 uid="uid://bmu55f0dlcs2k"]
+
+[ext_resource type="Script" uid="uid://37kdb7eodfrf" path="res://scripts/liars_dice_ui.gd" id="1_script"]
+[ext_resource type="Theme" uid="uid://drtks6vtivflm" path="res://themes/default.tres" id="2_theme"]
+[ext_resource type="Texture2D" uid="uid://d3g6eg5k2lagn" path="res://sprites/interface/kenney_ui-pack-adventure/PNG/Default/button_brown_close.png" id="3_close"]
+
+[node name="LiarsDice" type="CanvasLayer"]
+script = ExtResource("1_script")
+
+[node name="Panel" type="PanelContainer" parent="."]
+z_index = 10
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -300.0
+offset_top = -280.0
+offset_right = 300.0
+offset_bottom = 280.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_theme")
+
+[node name="VBox" type="VBoxContainer" parent="Panel"]
+layout_mode = 2
+
+[node name="Header" type="Label" parent="Panel/VBox"]
+layout_mode = 2
+text = "Liar's Dice"
+horizontal_alignment = 1
+
+[node name="Separator1" type="HSeparator" parent="Panel/VBox"]
+layout_mode = 2
+
+[node name="OpponentArea" type="VBoxContainer" parent="Panel/VBox"]
+layout_mode = 2
+
+[node name="OpponentName" type="Label" parent="Panel/VBox/OpponentArea"]
+layout_mode = 2
+text = "Opponent"
+horizontal_alignment = 1
+
+[node name="OpponentDice" type="HBoxContainer" parent="Panel/VBox/OpponentArea"]
+layout_mode = 2
+size_flags_horizontal = 4
+alignment = 1
+
+[node name="Separator2" type="HSeparator" parent="Panel/VBox"]
+layout_mode = 2
+
+[node name="PlayerArea" type="VBoxContainer" parent="Panel/VBox"]
+layout_mode = 2
+
+[node name="YourDice" type="Label" parent="Panel/VBox/PlayerArea"]
+layout_mode = 2
+text = "Your Dice:"
+
+[node name="PlayerDice" type="HBoxContainer" parent="Panel/VBox/PlayerArea"]
+layout_mode = 2
+size_flags_horizontal = 4
+alignment = 1
+
+[node name="StatsHint" type="Label" parent="Panel/VBox/PlayerArea"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.4, 0.4, 0.2, 1)
+theme_override_font_sizes/font_size = 32
+horizontal_alignment = 1
+
+[node name="Separator3" type="HSeparator" parent="Panel/VBox"]
+layout_mode = 2
+
+[node name="BidArea" type="VBoxContainer" parent="Panel/VBox"]
+layout_mode = 2
+
+[node name="CurrentBid" type="Label" parent="Panel/VBox/BidArea"]
+layout_mode = 2
+text = "Current Bid: None"
+horizontal_alignment = 1
+
+[node name="BidControls" type="HBoxContainer" parent="Panel/VBox/BidArea"]
+layout_mode = 2
+alignment = 1
+
+[node name="QtyLabel" type="Label" parent="Panel/VBox/BidArea/BidControls"]
+layout_mode = 2
+text = "Qty:"
+
+[node name="QuantitySpinner" type="SpinBox" parent="Panel/VBox/BidArea/BidControls"]
+layout_mode = 2
+min_value = 1.0
+max_value = 10.0
+value = 1.0
+
+[node name="FaceLabel" type="Label" parent="Panel/VBox/BidArea/BidControls"]
+layout_mode = 2
+text = "Face:"
+
+[node name="FaceSelector" type="OptionButton" parent="Panel/VBox/BidArea/BidControls"]
+layout_mode = 2
+item_count = 6
+popup/item_0/text = "1"
+popup/item_0/id = 1
+popup/item_1/text = "2"
+popup/item_1/id = 2
+popup/item_2/text = "3"
+popup/item_2/id = 3
+popup/item_3/text = "4"
+popup/item_3/id = 4
+popup/item_4/text = "5"
+popup/item_4/id = 5
+popup/item_5/text = "6"
+popup/item_5/id = 6
+
+[node name="MakeBidButton" type="Button" parent="Panel/VBox/BidArea"]
+layout_mode = 2
+text = "Make Bid"
+
+[node name="ActionButtons" type="HBoxContainer" parent="Panel/VBox"]
+layout_mode = 2
+
+[node name="CallLiarButton" type="Button" parent="Panel/VBox/ActionButtons"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Call LIAR!"
+
+[node name="FoldButton" type="Button" parent="Panel/VBox/ActionButtons"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Fold"
+
+[node name="Separator4" type="HSeparator" parent="Panel/VBox"]
+layout_mode = 2
+
+[node name="MessageLog" type="RichTextLabel" parent="Panel/VBox"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/normal_font_size = 28
+bbcode_enabled = true
+scroll_following = true
+
+[node name="CloseButton" type="TextureButton" parent="Panel"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+texture_normal = ExtResource("3_close")
+stretch_mode = 5

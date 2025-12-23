@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://b6au5thryggw8"
+path="res://.godot/imported/Pirate 3.wav-db76831c4cdf3af9574bdf33672a927c.sample"
+
+[deps]
+
+source_file="res://sounds/Pirate Music Pack/Wav/Pirate 3.wav"
+dest_files=["res://.godot/imported/Pirate 3.wav-db76831c4cdf3af9574bdf33672a927c.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

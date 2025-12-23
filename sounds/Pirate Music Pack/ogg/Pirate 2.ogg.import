@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://ducmp1brmnqtx"
+path="res://.godot/imported/Pirate 2.ogg-fda84c1f0d5de2e179f8b282dba9fd7a.oggvorbisstr"
+
+[deps]
+
+source_file="res://sounds/Pirate Music Pack/ogg/Pirate 2.ogg"
+dest_files=["res://.godot/imported/Pirate 2.ogg-fda84c1f0d5de2e179f8b282dba9fd7a.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://d3ct2c0urqebp"]
+
+[ext_resource type="TileSet" uid="uid://d336shacx4lv6" path="res://tilesets/ship2.tres" id="1_3gcp7"]
+
+[node name="ShipInterior" type="Node2D" unique_id=1904523872]
+
+[node name="Map" type="Node2D" parent="." unique_id=1213324679]
+
+[node name="Floor" type="TileMapLayer" parent="Map" unique_id=952801494]
+tile_set = ExtResource("1_3gcp7")
