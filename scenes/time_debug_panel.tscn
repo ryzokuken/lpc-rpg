@@ -1,0 +1,76 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/time_debug_panel.gd" id="1_script"]
+[ext_resource type="Theme" uid="uid://drtks6vtivflm" path="res://themes/default.tres" id="2_theme"]
+
+[node name="TimeDebugPanel" type="Control"]
+z_index = 200
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -250.0
+offset_top = -200.0
+grow_horizontal = 0
+grow_vertical = 0
+script = ExtResource("1_script")
+
+[node name="Panel" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_theme")
+
+[node name="VBox" type="VBoxContainer" parent="Panel"]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="Panel/VBox"]
+layout_mode = 2
+text = "⏰ Time Debug (F9)"
+horizontal_alignment = 1
+
+[node name="Separator" type="HSeparator" parent="Panel/VBox"]
+layout_mode = 2
+
+[node name="TimeScaleLabel" type="Label" parent="Panel/VBox"]
+layout_mode = 2
+text = "Time Scale: 1.0x"
+
+[node name="TimeScaleSlider" type="HSlider" parent="Panel/VBox"]
+layout_mode = 2
+min_value = 0.1
+max_value = 60.0
+step = 0.1
+value = 1.0
+
+[node name="Presets" type="HBoxContainer" parent="Panel/VBox"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Panel/VBox/Presets"]
+layout_mode = 2
+text = "Presets:"
+
+[node name="SkipHourButton" type="Button" parent="Panel/VBox"]
+layout_mode = 2
+text = "Skip 1 Hour"
+
+[node name="SetTimeContainer" type="HBoxContainer" parent="Panel/VBox"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Panel/VBox/SetTimeContainer"]
+layout_mode = 2
+text = "Set Hour:"
+
+[node name="HourSpin" type="SpinBox" parent="Panel/VBox/SetTimeContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+max_value = 23.0
+value = 8.0
+
+[node name="SetButton" type="Button" parent="Panel/VBox/SetTimeContainer"]
+layout_mode = 2
+text = "Set"

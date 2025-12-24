@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="SurvivalStats" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/survival_stats.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+belly = 100
+vigor = 100
+nerve = 100

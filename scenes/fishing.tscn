@@ -1,0 +1,96 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://scripts/fishing_ui.gd" id="1_script"]
+[ext_resource type="Theme" uid="uid://drtks6vtivflm" path="res://themes/default.tres" id="2_theme"]
+[ext_resource type="Texture2D" uid="uid://d3g6eg5k2lagn" path="res://sprites/interface/kenney_ui-pack-adventure/PNG/Default/button_brown_close.png" id="3_close"]
+
+[node name="FishingUI" type="CanvasLayer"]
+script = ExtResource("1_script")
+
+[node name="Panel" type="PanelContainer" parent="."]
+z_index = 10
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -250.0
+offset_top = -200.0
+offset_right = 250.0
+offset_bottom = 200.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_theme")
+
+[node name="VBox" type="VBoxContainer" parent="Panel"]
+layout_mode = 2
+
+[node name="Header" type="Label" parent="Panel/VBox"]
+layout_mode = 2
+text = "Fishing"
+horizontal_alignment = 1
+
+[node name="Separator1" type="HSeparator" parent="Panel/VBox"]
+layout_mode = 2
+
+[node name="PhaseLabel" type="Label" parent="Panel/VBox"]
+layout_mode = 2
+text = "Ready to Fish"
+horizontal_alignment = 1
+
+[node name="FishLabel" type="Label" parent="Panel/VBox"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 36
+horizontal_alignment = 1
+
+[node name="Separator2" type="HSeparator" parent="Panel/VBox"]
+layout_mode = 2
+
+[node name="TensionLabel" type="Label" parent="Panel/VBox"]
+layout_mode = 2
+text = "Line Tension"
+
+[node name="TensionBar" type="ProgressBar" parent="Panel/VBox"]
+layout_mode = 2
+max_value = 100.0
+value = 50.0
+show_percentage = false
+
+[node name="StaminaLabel" type="Label" parent="Panel/VBox"]
+layout_mode = 2
+text = "Fish Stamina"
+
+[node name="StaminaBar" type="ProgressBar" parent="Panel/VBox"]
+layout_mode = 2
+max_value = 100.0
+value = 100.0
+show_percentage = false
+
+[node name="HintLabel" type="Label" parent="Panel/VBox"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+theme_override_colors/font_color = Color(0.3, 0.3, 0.2, 1)
+text = "Press Cast to throw your line"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="Buttons" type="HBoxContainer" parent="Panel/VBox"]
+layout_mode = 2
+
+[node name="CastButton" type="Button" parent="Panel/VBox/Buttons"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Cast"
+
+[node name="ReelButton" type="Button" parent="Panel/VBox/Buttons"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+text = "REEL (Hold)"
+
+[node name="CloseButton" type="TextureButton" parent="Panel"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+texture_normal = ExtResource("3_close")
+stretch_mode = 5

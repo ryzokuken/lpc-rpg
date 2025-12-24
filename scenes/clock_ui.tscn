@@ -1,0 +1,88 @@
+[gd_scene load_steps=3 format=3 uid="uid://s6wllutvqjhq"]
+
+[ext_resource type="Script" uid="uid://cugvthroboufv" path="res://scripts/clock_ui.gd" id="1_script"]
+[ext_resource type="Theme" uid="uid://drtks6vtivflm" path="res://themes/default.tres" id="2_theme"]
+
+[node name="ClockUI" type="Control"]
+z_index = 100
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -100.0
+offset_top = -90.0
+offset_right = 100.0
+offset_bottom = 90.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_script")
+
+[node name="Panel" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_theme")
+
+[node name="VBox" type="VBoxContainer" parent="Panel"]
+layout_mode = 2
+
+[node name="TimeLabel" type="Label" parent="Panel/VBox"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 48
+text = "08:00"
+horizontal_alignment = 1
+
+[node name="DayLabel" type="Label" parent="Panel/VBox"]
+layout_mode = 2
+text = "Day 1"
+horizontal_alignment = 1
+
+[node name="PeriodLabel" type="Label" parent="Panel/VBox"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 28
+text = "Morning"
+horizontal_alignment = 1
+
+[node name="Separator" type="HSeparator" parent="Panel/VBox"]
+layout_mode = 2
+
+[node name="SurvivalBars" type="VBoxContainer" parent="Panel/VBox"]
+layout_mode = 2
+
+[node name="BellyLabel" type="Label" parent="Panel/VBox/SurvivalBars"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Belly"
+
+[node name="BellyBar" type="ProgressBar" parent="Panel/VBox/SurvivalBars"]
+custom_minimum_size = Vector2(0, 16)
+layout_mode = 2
+value = 100.0
+show_percentage = false
+
+[node name="VigorLabel" type="Label" parent="Panel/VBox/SurvivalBars"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Vigor"
+
+[node name="VigorBar" type="ProgressBar" parent="Panel/VBox/SurvivalBars"]
+custom_minimum_size = Vector2(0, 16)
+layout_mode = 2
+value = 100.0
+show_percentage = false
+
+[node name="NerveLabel" type="Label" parent="Panel/VBox/SurvivalBars"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Nerve"
+
+[node name="NerveBar" type="ProgressBar" parent="Panel/VBox/SurvivalBars"]
+custom_minimum_size = Vector2(0, 16)
+layout_mode = 2
+value = 100.0
+show_percentage = false

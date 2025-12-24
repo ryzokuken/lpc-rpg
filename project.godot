@@ -23,6 +23,7 @@ config/icon="res://icon.svg"
 
 DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
 ItemRegistry="*res://scripts/item_registry.gd"
+GameTime="*res://scripts/game_time.gd"
 
 [dialogue_manager]
 

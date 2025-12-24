@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://cow233q2ta08p"]
+
+[ext_resource type="Script" uid="uid://ctmrrj7lp4hfd" path="res://scripts/fishing_spot.gd" id="1_script"]
+[ext_resource type="PackedScene" uid="uid://dagnto4e2g6km" path="res://scenes/bubble.tscn" id="2_bubble"]
+
+[node name="FishingSpot" type="Node2D"]
+script = ExtResource("1_script")
+
+[node name="Bubble" parent="." instance=ExtResource("2_bubble")]
+z_index = 10
