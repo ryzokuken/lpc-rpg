@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Item" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/item.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+name = "Rum"
+type = 2
+description = "Strong Caribbean rum. Great for morale, terrible for aim."
+weight = 1
+value = 5
+hydration_delta = 10
+sobriety_delta = -35
+nerve_delta = 20

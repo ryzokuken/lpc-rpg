@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://cul4kbylyxv64"]
+
+[ext_resource type="Theme" uid="uid://drtks6vtivflm" path="res://themes/default.tres" id="1_oimnk"]
+[ext_resource type="Texture2D" uid="uid://dljvj7ex1ly6h" path="res://sprites/interface/kenney_ui-pack-adventure/PNG/Default/progress_transparent.png" id="2_o85tj"]
+[ext_resource type="Texture2D" uid="uid://br35br4s4eoro" path="res://sprites/interface/kenney_ui-pack-adventure/PNG/Default/progress_red.png" id="3_2n2bj"]
+[ext_resource type="Texture2D" uid="uid://juvqjqhtqyvt" path="res://sprites/interface/kenney_ui-pack-adventure/PNG/Default/progress_green.png" id="4_ahdmq"]
+
+[node name="Vitals" type="PanelContainer" unique_id=1449270008]
+custom_minimum_size = Vector2(72, 160)
+offset_right = 36.0
+offset_bottom = 36.0
+theme = ExtResource("1_oimnk")
+
+[node name="HealthBar" type="TextureProgressBar" parent="." unique_id=366541096]
+layout_mode = 2
+size_flags_horizontal = 0
+value = 45.0
+fill_mode = 3
+nine_patch_stretch = true
+stretch_margin_left = 8
+stretch_margin_top = 8
+stretch_margin_right = 8
+stretch_margin_bottom = 8
+texture_under = ExtResource("2_o85tj")
+texture_progress = ExtResource("3_2n2bj")
+
+[node name="StaminaBar" type="TextureProgressBar" parent="." unique_id=478188813]
+layout_mode = 2
+size_flags_horizontal = 8
+value = 65.0
+fill_mode = 3
+nine_patch_stretch = true
+stretch_margin_left = 8
+stretch_margin_top = 8
+stretch_margin_right = 8
+stretch_margin_bottom = 8
+texture_under = ExtResource("2_o85tj")
+texture_progress = ExtResource("4_ahdmq")

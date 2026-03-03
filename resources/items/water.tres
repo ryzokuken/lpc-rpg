@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Item" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/item.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+name = "Fresh Water"
+type = 2
+description = "Clean drinking water. Precious at sea."
+weight = 1
+value = 1
+hydration_delta = 40

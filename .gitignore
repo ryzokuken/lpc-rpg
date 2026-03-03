@@ -14,3 +14,9 @@ export_credentials.cfg
 .mono/
 data_*/
 mono_crash.*.json
+
+# Build artifacts
+exports/
+
+# Claude Code local settings
+.claude/settings.local.json

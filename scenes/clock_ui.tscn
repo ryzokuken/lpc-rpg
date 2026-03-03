@@ -1,25 +1,20 @@
-[gd_scene load_steps=3 format=3 uid="uid://s6wllutvqjhq"]
+[gd_scene format=3 uid="uid://s6wllutvqjhq"]
 
 [ext_resource type="Script" uid="uid://cugvthroboufv" path="res://scripts/clock_ui.gd" id="1_script"]
 [ext_resource type="Theme" uid="uid://drtks6vtivflm" path="res://themes/default.tres" id="2_theme"]
 
-[node name="ClockUI" type="Control"]
+[node name="ClockUI" type="Control" unique_id=1279756361]
 z_index = 100
 layout_mode = 3
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -100.0
-offset_top = -90.0
-offset_right = 100.0
-offset_bottom = 90.0
-grow_horizontal = 2
-grow_vertical = 2
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -240.0
+offset_bottom = 340.0
+grow_horizontal = 0
 script = ExtResource("1_script")
 
-[node name="Panel" type="PanelContainer" parent="."]
+[node name="Panel" type="PanelContainer" parent="." unique_id=200883938]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -28,61 +23,78 @@ grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("2_theme")
 
-[node name="VBox" type="VBoxContainer" parent="Panel"]
+[node name="VBox" type="VBoxContainer" parent="Panel" unique_id=1089646654]
 layout_mode = 2
 
-[node name="TimeLabel" type="Label" parent="Panel/VBox"]
+[node name="TimeLabel" type="Label" parent="Panel/VBox" unique_id=702861973]
 layout_mode = 2
 theme_override_font_sizes/font_size = 48
 text = "08:00"
 horizontal_alignment = 1
 
-[node name="DayLabel" type="Label" parent="Panel/VBox"]
+[node name="DayLabel" type="Label" parent="Panel/VBox" unique_id=1004645795]
 layout_mode = 2
 text = "Day 1"
 horizontal_alignment = 1
 
-[node name="PeriodLabel" type="Label" parent="Panel/VBox"]
+[node name="PeriodLabel" type="Label" parent="Panel/VBox" unique_id=349064015]
 layout_mode = 2
-theme_override_font_sizes/font_size = 28
+theme_override_font_sizes/font_size = 32
 text = "Morning"
 horizontal_alignment = 1
 
-[node name="Separator" type="HSeparator" parent="Panel/VBox"]
+[node name="Separator" type="HSeparator" parent="Panel/VBox" unique_id=718125715]
 layout_mode = 2
 
-[node name="SurvivalBars" type="VBoxContainer" parent="Panel/VBox"]
+[node name="SurvivalBars" type="VBoxContainer" parent="Panel/VBox" unique_id=2010710694]
 layout_mode = 2
 
-[node name="BellyLabel" type="Label" parent="Panel/VBox/SurvivalBars"]
+[node name="BellyLabel" type="Label" parent="Panel/VBox/SurvivalBars" unique_id=1414913393]
 layout_mode = 2
-theme_override_font_sizes/font_size = 24
-text = "Belly"
+text = "🍖 Belly"
 
-[node name="BellyBar" type="ProgressBar" parent="Panel/VBox/SurvivalBars"]
-custom_minimum_size = Vector2(0, 16)
-layout_mode = 2
-value = 100.0
-show_percentage = false
-
-[node name="VigorLabel" type="Label" parent="Panel/VBox/SurvivalBars"]
-layout_mode = 2
-theme_override_font_sizes/font_size = 24
-text = "Vigor"
-
-[node name="VigorBar" type="ProgressBar" parent="Panel/VBox/SurvivalBars"]
-custom_minimum_size = Vector2(0, 16)
+[node name="BellyBar" type="ProgressBar" parent="Panel/VBox/SurvivalBars" unique_id=500730655]
+custom_minimum_size = Vector2(0, 20)
 layout_mode = 2
 value = 100.0
 show_percentage = false
 
-[node name="NerveLabel" type="Label" parent="Panel/VBox/SurvivalBars"]
+[node name="HydrationLabel" type="Label" parent="Panel/VBox/SurvivalBars" unique_id=371705496]
 layout_mode = 2
-theme_override_font_sizes/font_size = 24
-text = "Nerve"
+text = "💧 Hydration"
 
-[node name="NerveBar" type="ProgressBar" parent="Panel/VBox/SurvivalBars"]
-custom_minimum_size = Vector2(0, 16)
+[node name="HydrationBar" type="ProgressBar" parent="Panel/VBox/SurvivalBars" unique_id=1127280464]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+value = 100.0
+show_percentage = false
+
+[node name="VigorLabel" type="Label" parent="Panel/VBox/SurvivalBars" unique_id=1907802148]
+layout_mode = 2
+text = "⚡ Vigor"
+
+[node name="VigorBar" type="ProgressBar" parent="Panel/VBox/SurvivalBars" unique_id=291955274]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+value = 100.0
+show_percentage = false
+
+[node name="NerveLabel" type="Label" parent="Panel/VBox/SurvivalBars" unique_id=696451805]
+layout_mode = 2
+text = "🧠 Nerve"
+
+[node name="NerveBar" type="ProgressBar" parent="Panel/VBox/SurvivalBars" unique_id=19790445]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+value = 100.0
+show_percentage = false
+
+[node name="SobrietyLabel" type="Label" parent="Panel/VBox/SurvivalBars" unique_id=921081856]
+layout_mode = 2
+text = "🍺 Sobriety"
+
+[node name="SobrietyBar" type="ProgressBar" parent="Panel/VBox/SurvivalBars" unique_id=464264457]
+custom_minimum_size = Vector2(0, 20)
 layout_mode = 2
 value = 100.0
 show_percentage = false

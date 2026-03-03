@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Item" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/item.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+name = "Bread"
+type = 2
+description = "Fresh bread. A rare treat at sea."
+weight = 1
+value = 2
+belly_delta = 20
+nerve_delta = 10

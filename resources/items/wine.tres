@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Item" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/item.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+name = "Wine"
+type = 2
+description = "Red wine. Usually reserved for officers."
+weight = 1
+value = 6
+hydration_delta = 15
+sobriety_delta = -20
+nerve_delta = 15

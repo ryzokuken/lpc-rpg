@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Item" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/item.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+name = "Fruit"
+type = 2
+description = "Fresh tropical fruit. Tasty and keeps you healthy."
+weight = 1
+value = 4
+belly_delta = 15
+hydration_delta = 10
+nerve_delta = 10

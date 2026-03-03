@@ -1,4 +1,4 @@
-[gd_scene load_steps=876 format=3 uid="uid://feopcc0b11nw"]
+[gd_scene format=3 uid="uid://feopcc0b11nw"]
 
 [ext_resource type="Script" uid="uid://bd6f7y2l0odao" path="res://scripts/player.gd" id="1_fulsm"]
 [ext_resource type="Texture2D" uid="uid://b0sjn5rkom1af" path="res://sprites/characters/male-bare/standard/backslash.png" id="2_fulsm"]
@@ -6961,7 +6961,7 @@ custom_frames = {
 "walk": [1, 2, 3, 4, 5, 6, 7, 8]
 }
 
-[node name="Player" type="CharacterBody2D"]
+[node name="Player" type="CharacterBody2D" unique_id=681707286]
 motion_mode = 1
 script = ExtResource("1_fulsm")
 inventory = ExtResource("2_i4ail")
@@ -6969,43 +6969,43 @@ character_name = "Player"
 stats = ExtResource("3_fdfoy")
 metadata/_custom_type_script = "uid://buvlusnvnmh5l"
 
-[node name="SpriteBare" type="AnimatedSprite2D" parent="."]
+[node name="SpriteBare" type="AnimatedSprite2D" parent="." unique_id=355550459]
 visible = false
 sprite_frames = SubResource("SpriteFrames_88264")
 animation = &"spellcast_south"
-frame_progress = 0.81787187
+frame_progress = 0.5964902
 offset = Vector2(0, -32)
 script = ExtResource("16_gl8cc")
 spritesheets_path = "res://sprites/characters/male-bare"
 animation_data = SubResource("Resource_x6fmb")
 metadata/_custom_type_script = "uid://dn724gbsh1jky"
 
-[node name="Collider" type="CollisionShape2D" parent="."]
+[node name="Collider" type="CollisionShape2D" parent="." unique_id=1500994928]
 z_index = 2
 position = Vector2(0, -14)
 shape = SubResource("CircleShape2D_fpgsw")
 
-[node name="Camera" type="Camera2D" parent="."]
-zoom = Vector2(2, 2)
+[node name="Camera" type="Camera2D" parent="." unique_id=689032639]
+zoom = Vector2(1.5, 1.5)
 
-[node name="Inventory" parent="." instance=ExtResource("20_60mlk")]
+[node name="Inventory" parent="." unique_id=1001677460 instance=ExtResource("20_60mlk")]
 visible = false
 
-[node name="Music" type="AudioStreamPlayer" parent="."]
+[node name="Music" type="AudioStreamPlayer" parent="." unique_id=390652955]
 stream = SubResource("AudioStreamRandomizer_x6fmb")
 
-[node name="Target" type="RayCast2D" parent="."]
+[node name="Target" type="RayCast2D" parent="." unique_id=46804901]
 collision_mask = 2
 hit_from_inside = true
 collide_with_areas = true
 collide_with_bodies = false
 
-[node name="InteractTooltip" parent="." instance=ExtResource("29_dt7fs")]
+[node name="InteractTooltip" parent="." unique_id=1106922990 instance=ExtResource("29_dt7fs")]
 visible = false
 
-[node name="Stealth" type="CanvasLayer" parent="."]
+[node name="Stealth" type="CanvasLayer" parent="." unique_id=72019144]
 
-[node name="ColorRect" type="ColorRect" parent="Stealth"]
+[node name="ColorRect" type="ColorRect" parent="Stealth" unique_id=296625096]
 material = SubResource("ShaderMaterial_0fb7m")
 anchors_preset = 15
 anchor_right = 1.0
@@ -7013,29 +7013,29 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Sprite" type="AnimatedSprite2D" parent="."]
+[node name="Sprite" type="AnimatedSprite2D" parent="." unique_id=73899272]
 position = Vector2(0, -32)
 sprite_frames = SubResource("SpriteFrames_cfu62")
 animation = &"spellcast_south"
-frame_progress = 0.5524385
+frame_progress = 0.33106208
 script = ExtResource("16_gl8cc")
 spritesheets_path = "res://sprites/characters/pirate-rod"
 animation_data = SubResource("Resource_2kjd1")
 metadata/_custom_type_script = "uid://dn724gbsh1jky"
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1627871346]
 
-[node name="ClockUI" parent="CanvasLayer" instance=ExtResource("44_hhpqf")]
-anchors_preset = 0
+[node name="ClockUI" parent="CanvasLayer" unique_id=1922949103 instance=ExtResource("44_hhpqf")]
+anchors_preset = 4
 anchor_left = 0.0
-anchor_top = 0.0
+anchor_top = 0.5
 anchor_right = 0.0
-anchor_bottom = 0.0
-offset_left = 0.0
-offset_top = 0.0
-offset_right = 200.0
+anchor_bottom = 0.5
+offset_left = 64.0
+offset_top = -170.0
+offset_right = 264.0
 offset_bottom = 0.0
 grow_horizontal = 1
-grow_vertical = 1
+grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4

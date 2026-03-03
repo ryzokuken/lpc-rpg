@@ -7,8 +7,10 @@ class_name ClockUI extends Control
 @onready var period_label: Label = $Panel/VBox/PeriodLabel
 @onready var survival_container: VBoxContainer = $Panel/VBox/SurvivalBars
 @onready var belly_bar: ProgressBar = $Panel/VBox/SurvivalBars/BellyBar
+@onready var hydration_bar: ProgressBar = $Panel/VBox/SurvivalBars/HydrationBar
 @onready var vigor_bar: ProgressBar = $Panel/VBox/SurvivalBars/VigorBar
 @onready var nerve_bar: ProgressBar = $Panel/VBox/SurvivalBars/NerveBar
+@onready var sobriety_bar: ProgressBar = $Panel/VBox/SurvivalBars/SobrietyBar
 
 # Reference to game time singleton
 var game_time: GameTime = null
@@ -24,13 +26,8 @@ var player: Player = null
 @export var compact_mode: bool = false # Just time, no day/period
 
 func _ready() -> void:
-	# Find GameTime singleton
-	if Engine.has_singleton("GameTime"):
-		game_time = Engine.get_singleton("GameTime")
-	else:
-		# Try as node in tree (autoload)
-		game_time = get_node_or_null("/root/GameTime")
-
+	# Find GameTime autoload
+	game_time = get_node_or_null("/root/GameTime")
 	if game_time:
 		game_time.time_updated.connect(_on_time_updated)
 		game_time.hour_passed.connect(_on_hour_passed)
@@ -101,6 +98,10 @@ func _update_survival_bars() -> void:
 		belly_bar.value = player.survival.belly
 		_color_bar(belly_bar, player.survival.belly)
 
+	if hydration_bar:
+		hydration_bar.value = player.survival.hydration
+		_color_bar(hydration_bar, player.survival.hydration)
+
 	if vigor_bar:
 		vigor_bar.value = player.survival.vigor
 		_color_bar(vigor_bar, player.survival.vigor)
@@ -108,6 +109,10 @@ func _update_survival_bars() -> void:
 	if nerve_bar:
 		nerve_bar.value = player.survival.nerve
 		_color_bar(nerve_bar, player.survival.nerve)
+
+	if sobriety_bar:
+		sobriety_bar.value = player.survival.sobriety
+		_color_bar(sobriety_bar, player.survival.sobriety)
 
 func _color_bar(bar: ProgressBar, value: int) -> void:
 	if value < 25:

@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="Item" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/item.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+name = "Small Beer"
+type = 2
+description = "Weak beer. Safer than water, barely alcoholic."
+weight = 1
+value = 1
+belly_delta = 5
+hydration_delta = 35
+sobriety_delta = -5
+nerve_delta = 5

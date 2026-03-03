@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Item" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/item.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+name = "Grog"
+type = 2
+description = "Rum mixed with water. Standard pirate ration."
+weight = 1
+value = 2
+hydration_delta = 25
+sobriety_delta = -15
+nerve_delta = 10

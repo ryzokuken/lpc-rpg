@@ -34,6 +34,9 @@ var _accumulated_seconds: float = 0.0
 # Reference to player for survival processing
 var _player: Player = null
 
+# Reference to player's ship crew for metabolic processing
+var _ship_crew: ShipCrew = null
+
 # ============================================================================
 # TIME CONSTANTS
 # ============================================================================
@@ -81,6 +84,10 @@ func _find_player() -> void:
 func register_player(player: Player) -> void:
 	_player = player
 
+## Register the ship crew for metabolic processing
+func register_ship_crew(crew: ShipCrew) -> void:
+	_ship_crew = crew
+
 # ============================================================================
 # TIME ADVANCEMENT
 # ============================================================================
@@ -104,12 +111,16 @@ func _advance_hour() -> void:
 
 	hour_passed.emit(current_hour, current_day)
 
-	# Process survival stats each hour
+	# Process survival/metabolics each hour
 	_process_survival_hour()
+	_process_crew_hour()
 
 func _advance_day() -> void:
 	current_day += 1
 	day_passed.emit(current_day)
+
+	# Process daily crew rations
+	_process_crew_day()
 
 func _process_survival_hour() -> void:
 	if _player == null:
@@ -122,6 +133,14 @@ func _process_survival_hour() -> void:
 			activity = SurvivalStats.ActivityLevel.WORKING
 
 		_player.survival.process_hour(activity)
+
+func _process_crew_hour() -> void:
+	if _ship_crew:
+		_ship_crew.process_hour()
+
+func _process_crew_day() -> void:
+	if _ship_crew:
+		_ship_crew.process_day()
 
 # ============================================================================
 # TIME QUERIES
