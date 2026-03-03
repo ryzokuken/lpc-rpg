@@ -1,49 +1,49 @@
-Build and test the game as a web export.
+Build and test the game as a web export using Claude Code's preview tools.
 
-## Build
+## Step 1: Build
 
-Run the PowerShell build script:
+Run the bash build script (uses Godot headless export):
 
-```powershell
-& ".agent/scripts/build-web.ps1"
+```bash
+bash ".agent/scripts/build-web.sh"
 ```
 
-If the script is not available, run directly:
+If the build fails with "Export templates missing", the user must open the Godot
+Editor and go to Editor → Manage Export Templates → Download 4.6.stable.
 
-```powershell
-& "d:\Godot Project\Godot_v4.6-stable_win64.exe\Godot_v4.6-stable_win64_console.exe" --headless --export-debug "Web" exports/web/index.html
-```
+## Step 2: Start Preview Server
 
-## Serve Locally
+Use `preview_start` with the "web-game" configuration. This runs serve.py which
+adds the COOP/COEP headers required for Godot's SharedArrayBuffer.
 
-```powershell
-Push-Location exports/web
-python -m http.server 8080
-```
+## Step 3: Verify
 
-Open http://localhost:8080
+Use `preview_screenshot` to capture the initial state.
 
-## Verification Checklist
+Wait a few seconds for the game to load, then take another screenshot.
 
-| Check | How to Test |
-|-------|-------------|
-| Game loads | Wait for loading bar |
-| Player moves | WASD keys |
-| Time advances | Watch clock HUD |
-| Interactions | Press E near NPCs |
+What to look for:
+- Loading bar progressing → game is loading (expected)
+- Game canvas showing the outdoor scene → success
+- Black screen + browser errors → investigate with `preview_console_logs`
+- "Click to focus" message → normal, game canvas needs focus to accept input
 
-## First-Time Setup
+Use `preview_console_logs` to check for errors. Common Godot web errors:
+- `SharedArrayBuffer is not defined` → COOP/COEP headers missing (should not happen with serve.py)
+- `Failed to load resource` → missing export or path issue
+- `RangeError: Out of memory` → increase browser memory
 
-If web export templates are not installed:
-1. Open Godot Editor
-2. Editor -> Manage Export Templates
-3. Download and Install for 4.6.stable
+## Step 4: Report
+
+Summarize what the screenshot shows. Include any console errors from
+`preview_console_logs`. If the game loaded successfully, confirm the test passed.
 
 ## Troubleshooting
 
-| Issue | Solution |
-|-------|----------|
-| "Export templates missing" | Editor -> Manage Export Templates -> Download |
-| Black screen | Check browser console (F12) for errors |
-| Controls don't respond | Click on game canvas to focus |
-| Python not found | Ensure `python` path is correct |
+| Issue | Fix |
+|-------|-----|
+| Build fails — Godot not found | Check path in `.agent/scripts/build-web.sh`; update or set `GODOT_PATH` |
+| Build fails — export templates missing | Godot Editor → Manage Export Templates → Download 4.6.stable |
+| preview_start fails | Check that `exports/web/index.html` exists (build must succeed first) |
+| Black screen | Run `preview_console_logs` and report errors |
+| Game loads but controls don't respond | Normal — browser game canvas needs a click to receive keyboard input |

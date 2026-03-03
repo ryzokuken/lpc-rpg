@@ -183,7 +183,31 @@ signal mutiny_triggered
 - Main scene: `scenes/outdoor.tscn`
 - Player is in `"player"` group
 - Use `GameTime.skip_hours(n)` for time testing
-- Run `/test-web` after major feature changes to verify web build
+
+### Commands
+
+| Command | What it does |
+|---------|-------------|
+| `/check` | Validate all GDScript files via `godot --check-only` (fast, no build) |
+| `/test-web` | Full build → serve → `preview_screenshot` to verify the game loads |
+
+### How the pipeline works
+
+1. `bash .agent/scripts/build-web.sh` — Godot headless export to `exports/web/`
+2. `preview_start "web-game"` — starts `serve.mjs` on port 8080 with COOP/COEP headers
+3. `preview_screenshot` — captures the running game for visual verification
+
+The server (`serve.mjs`) sets `Cross-Origin-Opener-Policy: same-origin` and
+`Cross-Origin-Embedder-Policy: require-corp`, which browsers require before
+allowing SharedArrayBuffer (used by Godot's web threading). A plain file server
+will produce a black screen with a SharedArrayBuffer console error.
+
+### Godot executable path
+
+Scripts default to:
+`/e/Godot Project/Godot_v4.6-stable_win64.exe/Godot_v4.6-stable_win64_console.exe`
+
+Override with `GODOT_PATH` env var if the path changes.
 
 ## Reference Documents
 

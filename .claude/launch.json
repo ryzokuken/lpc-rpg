@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "web-game",
+      "runtimeExecutable": "node",
+      "runtimeArgs": [".agent/scripts/serve.mjs"],
+      "port": 8080
+    }
+  ]
+}
